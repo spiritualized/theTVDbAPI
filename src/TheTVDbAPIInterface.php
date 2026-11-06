@@ -13,36 +13,36 @@
  *
  * Interface for the theTVDbAPI client.
  *
- * PHP version 7.4
+ * PHP version 8.4
  *
  * @category TheTVDbAPI
- * @package  CanIHaveSomeCoffee\TheTVDbAPI
+ * @package  spiritualized\TheTVDbAPI
  * @author   Willem Van Iseghem (canihavesomecoffee) <theTVDbAPI@canihavesome.coffee>
  * @license  See start of document
  * @link     https://canihavesome.coffee/projects/theTVDbAPI
  */
 declare(strict_types = 1);
 
-namespace CanIHaveSomeCoffee\TheTVDbAPI;
+namespace spiritualized\TheTVDbAPI;
 
-use CanIHaveSomeCoffee\TheTVDbAPI\Route\AuthenticationRoute;
-use CanIHaveSomeCoffee\TheTVDbAPI\Route\EpisodesRoute;
+use spiritualized\TheTVDbAPI\Route\AuthenticationRoute;
+use spiritualized\TheTVDbAPI\Route\EpisodesRoute;
 use Exception;
-use GuzzleHttp\Psr7\Response;
-use CanIHaveSomeCoffee\TheTVDbAPI\Exception\ParseException;
-use CanIHaveSomeCoffee\TheTVDbAPI\Exception\ResourceNotFoundException;
-use CanIHaveSomeCoffee\TheTVDbAPI\Exception\UnauthorizedException;
-use CanIHaveSomeCoffee\TheTVDbAPI\Route\ArtworkRoute;
-use CanIHaveSomeCoffee\TheTVDbAPI\Route\LanguagesRoute;
-use CanIHaveSomeCoffee\TheTVDbAPI\Route\SearchRoute;
-use CanIHaveSomeCoffee\TheTVDbAPI\Route\SeriesRoute;
-use CanIHaveSomeCoffee\TheTVDbAPI\Route\UpdatesRoute;
+use Psr\Http\Message\ResponseInterface;
+use spiritualized\TheTVDbAPI\Exception\ParseException;
+use spiritualized\TheTVDbAPI\Exception\ResourceNotFoundException;
+use spiritualized\TheTVDbAPI\Exception\UnauthorizedException;
+use spiritualized\TheTVDbAPI\Route\ArtworkRoute;
+use spiritualized\TheTVDbAPI\Route\LanguagesRoute;
+use spiritualized\TheTVDbAPI\Route\SearchRoute;
+use spiritualized\TheTVDbAPI\Route\SeriesRoute;
+use spiritualized\TheTVDbAPI\Route\UpdatesRoute;
 
 /**
  * Interface TheTVDbAPIInterface
  *
  * @category TheTVDbAPI
- * @package  CanIHaveSomeCoffee\TheTVDbAPI
+ * @package  spiritualized\TheTVDbAPI
  * @author   Willem Van Iseghem (canihavesomecoffee) <theTVDbAPI@canihavesome.coffee>
  * @license  See start of document
  * @link     https://canihavesome.coffee/projects/theTVDbAPI
@@ -129,11 +129,11 @@ interface TheTVDbAPIInterface
      * @param string $path    Path to the API call
      * @param array  $options HTTP Client options
      *
-     * @return Response
+     * @return ResponseInterface
      * @throws UnauthorizedException
      * @throws ResourceNotFoundException
      */
-    public function performAPICall(string $method, string $path, array $options = []): Response;
+    public function performAPICall(string $method, string $path, array $options = []): ResponseInterface;
 
     /**
      * Perform an API call to theTVDb and return a JSON response

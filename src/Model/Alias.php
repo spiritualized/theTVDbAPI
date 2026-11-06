@@ -1,6 +1,6 @@
 <?php
 /**
- * Copyright (c) 2020, Willem Van Iseghem (canihavesomecoffee) <theTVDbAPI@canihavesome.coffee>
+ * Copyright (c) 2020, Willem Van Iseghem (CanIHaveSomeCoffee) <theTVDbAPI@canihavesome.coffee>
  *
  * Permission to use, copy, modify, and/or distribute this software for any purpose with or without fee is hereby
  * granted, provided that the above copyright notice and this permission notice appear in all copies.
@@ -13,24 +13,24 @@
  *
  * Provides a class with the data an alias contains.
  *
- * PHP version 7.4
+ * PHP version 8.4
  *
  * @category TheTVDbAPI
- * @package  CanIHaveSomeCoffee\TheTVDbAPI\Model
- * @author   Willem Van Iseghem (canihavesomecoffee) <theTVDbAPI@canihavesome.coffee>
+ * @package  spiritualized\TheTVDbAPI\Model
+ * @author   Willem Van Iseghem (CanIHaveSomeCoffee) <theTVDbAPI@canihavesome.coffee>
  * @license  See start of document
  * @link     https://canihavesome.coffee/projects/theTVDbAPI
  */
 declare(strict_types = 1);
 
-namespace CanIHaveSomeCoffee\TheTVDbAPI\Model;
+namespace spiritualized\TheTVDbAPI\Model;
 
 /**
  * Class Alias
  *
  * @category TheTVDbAPI
- * @package  CanIHaveSomeCoffee\TheTVDbAPI\Model
- * @author   Willem Van Iseghem (canihavesomecoffee) <theTVDbAPI@canihavesome.coffee>
+ * @package  spiritualized\TheTVDbAPI\Model
+ * @author   Willem Van Iseghem (CanIHaveSomeCoffee) <theTVDbAPI@canihavesome.coffee>
  * @license  See start of document
  * @link     https://canihavesome.coffee/projects/theTVDbAPI
  */

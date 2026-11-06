@@ -14,32 +14,32 @@
 
 declare(strict_types=1);
 
-namespace CanIHaveSomeCoffee\TheTVDbAPI\Tests\Route;
+namespace spiritualized\TheTVDbAPI\Tests\Route;
 
-use CanIHaveSomeCoffee\TheTVDbAPI\TheTVDbAPI;
+use spiritualized\TheTVDbAPI\TheTVDbAPI;
 use PHPUnit\Framework\MockObject\MockObject;
 use PHPUnit\Framework\TestCase;
 
 /**
- * Class BaseRouteTest
+ * Class BaseRouteTestCase
  *
  * @category TheTVDbAPI
- * @package  CanIHaveSomeCoffee\TheTVDbAPI\Tests\Route
+ * @package  spiritualized\TheTVDbAPI\Tests\Route
  * @author   Willem Van Iseghem (canihavesomecoffee) <theTVDbAPI@canihavesome.coffee>
  * @license  See start of document
  * @link     https://canihavesome.coffee/projects/theTVDbAPI
  */
-class BaseRouteTest extends TestCase
+abstract class BaseRouteTestCase extends TestCase
 {
     /**
      * Mock for the parent of the route
      *
-     * @var MockObject
+     * @var TheTVDbAPI&MockObject
      */
-    protected $parent;
+    protected TheTVDbAPI $parent;
 
     public function setUp(): void
     {
-        $this->parent = static::getMockBuilder(TheTVDbAPI::class)->getMock();
+        $this->parent = $this->createMock(TheTVDbAPI::class);
     }
 }

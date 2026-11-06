@@ -13,25 +13,25 @@
  *
  * Route that exposes the episodes methods of TheTVDb API.
  *
- * PHP version 7.4
+ * PHP version 8.4
  *
  * @category TheTVDbAPI
- * @package  CanIHaveSomeCoffee\TheTVDbAPI\Route
+ * @package  spiritualized\TheTVDbAPI\Route
  * @author   Willem Van Iseghem (canihavesomecoffee) <theTVDbAPI@canihavesome.coffee>
  * @license  See start of document
  * @link     https://canihavesome.coffee/projects/theTVDbAPI
  */
 declare(strict_types = 1);
 
-namespace CanIHaveSomeCoffee\TheTVDbAPI\Route;
+namespace spiritualized\TheTVDbAPI\Route;
 
-use CanIHaveSomeCoffee\TheTVDbAPI\DataParser;
-use CanIHaveSomeCoffee\TheTVDbAPI\Exception\ParseException;
-use CanIHaveSomeCoffee\TheTVDbAPI\Exception\ResourceNotFoundException;
-use CanIHaveSomeCoffee\TheTVDbAPI\Exception\UnauthorizedException;
-use CanIHaveSomeCoffee\TheTVDbAPI\Model\EpisodeBaseRecord;
-use CanIHaveSomeCoffee\TheTVDbAPI\Model\EpisodeExtendedRecord;
-use CanIHaveSomeCoffee\TheTVDbAPI\Model\Translation;
+use spiritualized\TheTVDbAPI\DataParser;
+use spiritualized\TheTVDbAPI\Exception\ParseException;
+use spiritualized\TheTVDbAPI\Exception\ResourceNotFoundException;
+use spiritualized\TheTVDbAPI\Exception\UnauthorizedException;
+use spiritualized\TheTVDbAPI\Model\EpisodeBaseRecord;
+use spiritualized\TheTVDbAPI\Model\EpisodeExtendedRecord;
+use spiritualized\TheTVDbAPI\Model\Translation;
 use Exception;
 use Symfony\Component\Serializer\Exception\ExceptionInterface;
 
@@ -39,7 +39,7 @@ use Symfony\Component\Serializer\Exception\ExceptionInterface;
  * Class EpisodesRoute
  *
  * @category TheTVDbAPI
- * @package  CanIHaveSomeCoffee\TheTVDbAPI\Route
+ * @package  spiritualized\TheTVDbAPI\Route
  * @author   Willem Van Iseghem (canihavesomecoffee) <theTVDbAPI@canihavesome.coffee>
  * @license  See start of document
  * @link     https://canihavesome.coffee/projects/theTVDbAPI

@@ -14,21 +14,21 @@
 
 declare(strict_types=1);
 
-namespace CanIHaveSomeCoffee\TheTVDbAPI\Tests\Route;
+namespace spiritualized\TheTVDbAPI\Tests\Route;
 
-use CanIHaveSomeCoffee\TheTVDbAPI\Model\Language;
-use CanIHaveSomeCoffee\TheTVDbAPI\Route\LanguagesRoute;
+use spiritualized\TheTVDbAPI\Model\Language;
+use spiritualized\TheTVDbAPI\Route\LanguagesRoute;
 
 /**
  * Class EpisodesRouteTest
  *
  * @category TheTVDbAPI
- * @package  CanIHaveSomeCoffee\TheTVDbAPI\Tests
+ * @package  spiritualized\TheTVDbAPI\Tests
  * @author   Willem Van Iseghem (canihavesomecoffee) <theTVDbAPI@canihavesome.coffee>
  * @license  See start of document
  * @link     https://canihavesome.coffee/projects/theTVDbAPI
  */
-class LanguagesRouteTest extends BaseRouteTest
+class LanguagesRouteTest extends BaseRouteTestCase
 {
     public function testAllLanguages()
     {

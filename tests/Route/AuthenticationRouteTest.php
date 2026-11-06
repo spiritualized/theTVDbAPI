@@ -14,21 +14,21 @@
 
 declare(strict_types=1);
 
-namespace CanIHaveSomeCoffee\TheTVDbAPI\Tests\Route;
+namespace spiritualized\TheTVDbAPI\Tests\Route;
 
-use CanIHaveSomeCoffee\TheTVDbAPI\Exception\UnauthorizedException;
-use CanIHaveSomeCoffee\TheTVDbAPI\Route\AuthenticationRoute;
+use spiritualized\TheTVDbAPI\Exception\UnauthorizedException;
+use spiritualized\TheTVDbAPI\Route\AuthenticationRoute;
 
 /**
  * Class AuthenticationRouteTest
  *
  * @category TheTVDbAPI
- * @package  CanIHaveSomeCoffee\TheTVDbAPI\Tests
+ * @package  spiritualized\TheTVDbAPI\Tests
  * @author   Willem Van Iseghem (canihavesomecoffee) <theTVDbAPI@canihavesome.coffee>
  * @license  See start of document
  * @link     https://canihavesome.coffee/projects/theTVDbAPI
  */
-class AuthenticationRouteTest extends BaseRouteTest
+class AuthenticationRouteTest extends BaseRouteTestCase
 {
     public function testAPIKeyLogin()
     {

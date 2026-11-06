@@ -14,16 +14,16 @@
 
 declare(strict_types=1);
 
-namespace CanIHaveSomeCoffee\TheTVDbAPI\Tests;
+namespace spiritualized\TheTVDbAPI\Tests;
 
-use CanIHaveSomeCoffee\TheTVDbAPI\TheTVDbAPI;
+use spiritualized\TheTVDbAPI\TheTVDbAPI;
 use PHPUnit\Framework\TestCase;
 
 /**
  * Class TheTVDbAPIDataTest tests with real data from the live API.
  *
  * @category TheTVDbAPI
- * @package  CanIHaveSomeCoffee\TheTVDbAPI\Tests
+ * @package  spiritualized\TheTVDbAPI\Tests
  * @author   Willem Van Iseghem (canihavesomecoffee) <theTVDbAPI@canihavesome.coffee>
  * @license  See start of document
  * @link     https://canihavesome.coffee/projects/theTVDbAPI

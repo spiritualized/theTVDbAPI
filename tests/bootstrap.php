@@ -13,7 +13,7 @@
  *
  * Bootstrap for test suite.
  *
- * PHP version 7.4
+ * PHP version 8.4
  *
  * @category TheTVDbAPI
  * @author   Willem Van Iseghem (canihavesomecoffee) <theTVDbAPI@canihavesome.coffee>
@@ -29,5 +29,3 @@ if (file_exists(__DIR__.'/../vendor/autoload.php')) {
 } else {
     throw new Exception('Could not find Composer\'s autoload.php file.');
 }
-
-require_once __DIR__.'/Route/BaseRouteTest.php';

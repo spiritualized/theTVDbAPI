@@ -20,7 +20,6 @@
 build
 # Vendor
 vendor
-# Composer lock
-composer.lock
 # PHP Unit cache
 .phpunit.result.cache
+.phpunit.cache/

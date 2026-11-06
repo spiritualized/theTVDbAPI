@@ -14,21 +14,21 @@
 
 declare(strict_types=1);
 
-namespace CanIHaveSomeCoffee\TheTVDbAPI\Tests\Route;
+namespace spiritualized\TheTVDbAPI\Tests\Route;
 
-use CanIHaveSomeCoffee\TheTVDbAPI\Model\EpisodeBaseRecord;
-use CanIHaveSomeCoffee\TheTVDbAPI\Route\EpisodesRoute;
+use spiritualized\TheTVDbAPI\Model\EpisodeBaseRecord;
+use spiritualized\TheTVDbAPI\Route\EpisodesRoute;
 
 /**
  * Class EpisodesRouteTest
  *
  * @category TheTVDbAPI
- * @package  CanIHaveSomeCoffee\TheTVDbAPI\Tests
+ * @package  spiritualized\TheTVDbAPI\Tests
  * @author   Willem Van Iseghem (canihavesomecoffee) <theTVDbAPI@canihavesome.coffee>
  * @license  See start of document
  * @link     https://canihavesome.coffee/projects/theTVDbAPI
  */
-class EpisodesRouteTest extends BaseRouteTest
+class EpisodesRouteTest extends BaseRouteTestCase
 {
     public function testGetEpisodeWithGivenId()
     {

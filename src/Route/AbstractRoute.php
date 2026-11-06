@@ -13,25 +13,25 @@
  *
  * Base route class
  *
- * PHP version 7.4
+ * PHP version 8.4
  *
  * @category TheTVDbAPI
- * @package  CanIHaveSomeCoffee\TheTVDbAPI\Route
+ * @package  spiritualized\TheTVDbAPI\Route
  * @author   Willem Van Iseghem (canihavesomecoffee) <theTVDbAPI@canihavesome.coffee>
  * @license  See start of document
  * @link     https://canihavesome.coffee/projects/theTVDbAPI
  */
 declare(strict_types = 1);
 
-namespace CanIHaveSomeCoffee\TheTVDbAPI\Route;
+namespace spiritualized\TheTVDbAPI\Route;
 
-use CanIHaveSomeCoffee\TheTVDbAPI\TheTVDbAPIInterface;
+use spiritualized\TheTVDbAPI\TheTVDbAPIInterface;
 
 /**
  * Class AbstractRoute
  *
  * @category TheTVDbAPI
- * @package  CanIHaveSomeCoffee\TheTVDbAPI\Route
+ * @package  spiritualized\TheTVDbAPI\Route
  * @author   Willem Van Iseghem (canihavesomecoffee) <theTVDbAPI@canihavesome.coffee>
  * @license  See start of document
  * @link     https://canihavesome.coffee/projects/theTVDbAPI

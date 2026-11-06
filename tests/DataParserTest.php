@@ -14,18 +14,18 @@
 
 declare(strict_types=1);
 
-namespace CanIHaveSomeCoffee\TheTVDbAPI\Tests;
+namespace spiritualized\TheTVDbAPI\Tests;
 
-use CanIHaveSomeCoffee\TheTVDbAPI\DataParser;
-use CanIHaveSomeCoffee\TheTVDbAPI\Model\EpisodeBaseRecord;
-use CanIHaveSomeCoffee\TheTVDbAPI\Model\SeriesBaseRecord;
+use spiritualized\TheTVDbAPI\DataParser;
+use spiritualized\TheTVDbAPI\Model\EpisodeBaseRecord;
+use spiritualized\TheTVDbAPI\Model\SeriesBaseRecord;
 use PHPUnit\Framework\TestCase;
 
 /**
  * Class DataParserTest
  *
  * @category TheTVDbAPI
- * @package  CanIHaveSomeCoffee\TheTVDbAPI\Tests
+ * @package  spiritualized\TheTVDbAPI\Tests
  * @author   Willem Van Iseghem (canihavesomecoffee) <theTVDbAPI@canihavesome.coffee>
  * @license  See start of document
  * @link     https://canihavesome.coffee/projects/theTVDbAPI

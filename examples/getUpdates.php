@@ -13,7 +13,7 @@
  *
  * Example to show retrieving a Dutch show (which misses most English titles) using Dutch as the fallback.
  *
- * PHP version 7.4
+ * PHP version 8.4
  *
  * @category Examples
  * @author   Willem Van Iseghem (canihavesomecoffee) <theTVDbAPI@canihavesome.coffee>
@@ -23,7 +23,7 @@
 
 declare(strict_types=1);
 
-use CanIHaveSomeCoffee\TheTVDbAPI\TheTVDbAPI;
+use spiritualized\TheTVDbAPI\TheTVDbAPI;
 
 require_once __DIR__ . '/../vendor/autoload.php';
 
@@ -44,7 +44,7 @@ $data = $theTVDbAPI->updates()->query($now);
     This will yield something like:
     array(28) {
         [0]=>
-        object(CanIHaveSomeCoffee\TheTVDbAPI\Model\EntityUpdate)#52 (4) {
+        object(spiritualized\TheTVDbAPI\Model\EntityUpdate)#52 (4) {
     ["entityType"]=>
     string(6) "series"
     ["method"]=>
@@ -55,7 +55,7 @@ $data = $theTVDbAPI->updates()->query($now);
     int(1631921873)
           }
           [1]=>
-          object(CanIHaveSomeCoffee\TheTVDbAPI\Model\EntityUpdate)#86 (4) {
+          object(spiritualized\TheTVDbAPI\Model\EntityUpdate)#86 (4) {
     ["entityType"]=>
     string(8) "episodes"
     ["method"]=>
@@ -66,7 +66,7 @@ $data = $theTVDbAPI->updates()->query($now);
     int(1631921874)
           }
           [2]=>
-          object(CanIHaveSomeCoffee\TheTVDbAPI\Model\EntityUpdate)#79 (4) {
+          object(spiritualized\TheTVDbAPI\Model\EntityUpdate)#79 (4) {
     ["entityType"]=>
     string(18) "translatedepisodes"
     ["method"]=>

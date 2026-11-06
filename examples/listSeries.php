@@ -13,7 +13,7 @@
  *
  * Example to show retrieving a Dutch show (which misses most English titles) using Dutch as the fallback.
  *
- * PHP version 7.4
+ * PHP version 8.4
  *
  * @category Examples
  * @author   Willem Van Iseghem (canihavesomecoffee) <theTVDbAPI@canihavesome.coffee>
@@ -23,7 +23,7 @@
 
 declare(strict_types=1);
 
-use CanIHaveSomeCoffee\TheTVDbAPI\TheTVDbAPI;
+use spiritualized\TheTVDbAPI\TheTVDbAPI;
 
 require_once __DIR__ . '/../vendor/autoload.php';
 
@@ -44,7 +44,7 @@ var_dump($theTVDbAPI->getLinks());
     This results in something like
 
     Links:
-    object(CanIHaveSomeCoffee\TheTVDbAPI\Model\Links)#53 (3) {
+    object(spiritualized\TheTVDbAPI\Model\Links)#53 (3) {
       ["prev"]=>
       NULL
       ["self"]=>
@@ -57,7 +57,7 @@ var_dump($theTVDbAPI->getLinks());
     {
     ...
       [499]=>
-      object(CanIHaveSomeCoffee\TheTVDbAPI\Model\SeriesBaseRecord)#1245 (15) {
+      object(spiritualized\TheTVDbAPI\Model\SeriesBaseRecord)#1245 (15) {
     ["abbreviation"]=>
     uninitialized(string)
     ["aliases"]=>
@@ -95,7 +95,7 @@ var_dump($theTVDbAPI->getLinks());
     ["slug"]=>
     string(25) "the-george-and-alana-show"
     ["status"]=>
-    object(CanIHaveSomeCoffee\TheTVDbAPI\Model\Status)#1248 (4) {
+    object(spiritualized\TheTVDbAPI\Model\Status)#1248 (4) {
       ["id"]=>
       NULL
       ["keepUpdated"]=>

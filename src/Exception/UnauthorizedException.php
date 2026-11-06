@@ -13,17 +13,17 @@
  *
  * Class that indicates a request returned a 401 Unauthorized status code.
  *
- * PHP version 7.4
+ * PHP version 8.4
  *
  * @category TheTVDbAPI
- * @package  CanIHaveSomeCoffee\TheTVDbAPI\Exception
+ * @package  spiritualized\TheTVDbAPI\Exception
  * @author   Willem Van Iseghem (canihavesomecoffee) <theTVDbAPI@canihavesome.coffee>
  * @license  See start of document
  * @link     https://canihavesome.coffee/projects/theTVDbAPI
  */
 declare(strict_types = 1);
 
-namespace CanIHaveSomeCoffee\TheTVDbAPI\Exception;
+namespace spiritualized\TheTVDbAPI\Exception;
 
 use Exception;
 
@@ -31,7 +31,7 @@ use Exception;
  * Class UnauthorizedException
  *
  * @category TheTVDbAPI
- * @package  CanIHaveSomeCoffee\TheTVDbAPI\Exception
+ * @package  spiritualized\TheTVDbAPI\Exception
  * @author   Willem Van Iseghem (canihavesomecoffee) <theTVDbAPI@canihavesome.coffee>
  * @license  See start of document
  * @link     https://canihavesome.coffee/projects/theTVDbAPI

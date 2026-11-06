@@ -13,40 +13,40 @@
  *
  * The main class for this library.
  *
- * PHP version 7.4
+ * PHP version 8.4
  *
  * @category TheTVDbAPI
- * @package  CanIHaveSomeCoffee\TheTVDbAPI
+ * @package  spiritualized\TheTVDbAPI
  * @author   Willem Van Iseghem (canihavesomecoffee) <theTVDbAPI@canihavesome.coffee>
  * @license  See start of document
  * @link     https://canihavesome.coffee/projects/theTVDbAPI
  */
 declare(strict_types = 1);
 
-namespace CanIHaveSomeCoffee\TheTVDbAPI;
+namespace spiritualized\TheTVDbAPI;
 
-use CanIHaveSomeCoffee\TheTVDbAPI\Exception\ParseException;
-use CanIHaveSomeCoffee\TheTVDbAPI\Exception\ResourceNotFoundException;
-use CanIHaveSomeCoffee\TheTVDbAPI\Exception\UnauthorizedException;
-use CanIHaveSomeCoffee\TheTVDbAPI\Model\Links;
-use CanIHaveSomeCoffee\TheTVDbAPI\Route\AuthenticationRoute;
-use CanIHaveSomeCoffee\TheTVDbAPI\Route\ArtworkRoute;
-use CanIHaveSomeCoffee\TheTVDbAPI\Route\EpisodesRoute;
-use CanIHaveSomeCoffee\TheTVDbAPI\Route\LanguagesRoute;
-use CanIHaveSomeCoffee\TheTVDbAPI\Route\RouteFactory;
-use CanIHaveSomeCoffee\TheTVDbAPI\Route\SearchRoute;
-use CanIHaveSomeCoffee\TheTVDbAPI\Route\SeriesRoute;
-use CanIHaveSomeCoffee\TheTVDbAPI\Route\UpdatesRoute;
+use spiritualized\TheTVDbAPI\Exception\ParseException;
+use spiritualized\TheTVDbAPI\Exception\ResourceNotFoundException;
+use spiritualized\TheTVDbAPI\Exception\UnauthorizedException;
+use spiritualized\TheTVDbAPI\Model\Links;
+use spiritualized\TheTVDbAPI\Route\AuthenticationRoute;
+use spiritualized\TheTVDbAPI\Route\ArtworkRoute;
+use spiritualized\TheTVDbAPI\Route\EpisodesRoute;
+use spiritualized\TheTVDbAPI\Route\LanguagesRoute;
+use spiritualized\TheTVDbAPI\Route\RouteFactory;
+use spiritualized\TheTVDbAPI\Route\SearchRoute;
+use spiritualized\TheTVDbAPI\Route\SeriesRoute;
+use spiritualized\TheTVDbAPI\Route\UpdatesRoute;
 use Exception;
 use GuzzleHttp\Client;
-use GuzzleHttp\Psr7\Response;
+use Psr\Http\Message\ResponseInterface;
 use Symfony\Component\Serializer\Exception\ExceptionInterface;
 
 /**
  * Class TheTVDbAPI
  *
  * @category TheTVDbAPI
- * @package  CanIHaveSomeCoffee\TheTVDbAPI
+ * @package  spiritualized\TheTVDbAPI
  * @author   Willem Van Iseghem (canihavesomecoffee) <theTVDbAPI@canihavesome.coffee>
  * @license  See start of document
  * @link     https://canihavesome.coffee/projects/theTVDbAPI
@@ -72,7 +72,7 @@ class TheTVDbAPI implements TheTVDbAPIInterface
      *
      * @var string|null
      */
-    private ?string $token;
+    private ?string $token = null;
 
     /**
      * Property used to control pagination (if any).
@@ -250,8 +250,7 @@ class TheTVDbAPI implements TheTVDbAPIInterface
     {
         $options = $this->getDefaultHttpClientOptions($options);
 
-        /* @type Response $response */
-        $response = $this->httpClient->{$method}($path, $options);
+        $response = $this->httpClient->request(strtoupper($method), $path, $options);
 
         if ($response->getStatusCode() === 401) {
             throw UnauthorizedException::invalidToken();
@@ -273,12 +272,11 @@ class TheTVDbAPI implements TheTVDbAPIInterface
      * @throws UnauthorizedException
      * @throws ResourceNotFoundException
      */
-    public function performAPICall(string $method, string $path, array $options = []): Response
+    public function performAPICall(string $method, string $path, array $options = []): ResponseInterface
     {
         $options = $this->getDefaultHttpClientOptions($options);
 
-        /* @type Response $response */
-        $response = $this->httpClient->{$method}($path, $options);
+        $response = $this->httpClient->request(strtoupper($method), $path, $options);
 
         if ($response->getStatusCode() === 401) {
             throw UnauthorizedException::invalidToken();

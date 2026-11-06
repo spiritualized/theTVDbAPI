@@ -1,9 +1,4 @@
-# CanIHaveSomeCoffee/TheTVDbAPI
-
-[![Packagist](https://img.shields.io/packagist/v/canihavesomecoffee/thetvdbapi.svg)](https://packagist.org/packages/canihavesomecoffee/thetvdbapi)
-[![Minimum PHP Version](https://img.shields.io/packagist/php-v/canihavesomecoffee/theTVDbAPI)](https://php.net/)
-[![Build status](https://api.travis-ci.org/canihavesomecoffee/theTVDbAPI.svg?branch=master)](https://travis-ci.org/canihavesomecoffee/theTVDbAPI)
-[![codecov](https://codecov.io/gh/canihavesomecoffee/theTVDbAPI/branch/master/graph/badge.svg)](https://codecov.io/gh/canihavesomecoffee/theTVDbAPI)
+# spiritualized/TheTVDbAPI
 
 This is an API client for the thetvdb.com website. It's using the **4th** version of the theTVDb API. In order to be
  able to access this API you'll have to register on theTVDb first and obtain a project key.
@@ -21,7 +16,7 @@ To create an API key, create an account and visit the API keys page on your dash
 Install this package using composer:
 
 ````
-$ composer require canihavesomecoffee/thetvdbapi
+$ composer require spiritualized/thetvdbapi
 ````
 
 ## Documentation
@@ -38,7 +33,7 @@ For example, if you want translations in Dutch, but a fallback to English if no 
 this as follows:
 
 ````
-$theTVDbAPI = new \CanIHaveSomeCoffee\TheTVDbAPI\TheTVDbAPI("nld", "eng");
+$theTVDbAPI = new \spiritualized\TheTVDbAPI\TheTVDbAPI("nld", "eng");
 ````
 
 By default, the primary language is set to English without a fallback language.
@@ -46,7 +41,7 @@ By default, the primary language is set to English without a fallback language.
 ### Authentication
 
 ````
-$theTVDbAPI = new \CanIHaveSomeCoffee\TheTVDbAPI\TheTVDbAPI();
+$theTVDbAPI = new \spiritualized\TheTVDbAPI\TheTVDbAPI();
 
 // Obtain a token. Optionally you can pass a user pin through as well.
 $token = $theTVDbAPI->authentication()->login($apiKey);

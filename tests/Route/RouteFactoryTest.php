@@ -14,46 +14,36 @@
 
 declare(strict_types=1);
 
-namespace CanIHaveSomeCoffee\TheTVDbAPI\Tests\Route;
+namespace spiritualized\TheTVDbAPI\Tests\Route;
 
-use CanIHaveSomeCoffee\TheTVDbAPI\Route\AuthenticationRoute;
-use CanIHaveSomeCoffee\TheTVDbAPI\Route\RouteFactory;
+use spiritualized\TheTVDbAPI\Route\AuthenticationRoute;
+use spiritualized\TheTVDbAPI\Route\RouteFactory;
+use spiritualized\TheTVDbAPI\TheTVDbAPIInterface;
 use InvalidArgumentException;
-use PHPUnit\Framework\MockObject\MockObject;
 use PHPUnit\Framework\TestCase;
 
 /**
  * Class RouteFactoryTest
  *
  * @category TheTVDbAPI
- * @package  CanIHaveSomeCoffee\TheTVDbAPI\Tests
+ * @package  spiritualized\TheTVDbAPI\Tests
  * @author   Willem Van Iseghem (canihavesomecoffee) <theTVDbAPI@canihavesome.coffee>
  * @license  See start of document
  * @link     https://canihavesome.coffee/projects/theTVDbAPI
  */
 class RouteFactoryTest extends TestCase
 {
-    /**
-     * Mock for the parent of the route
-     *
-     * @var MockObject
-     */
-    protected $parent;
-
-    public function setUp(): void
-    {
-        $this->parent = static::getMockBuilder('CanIHaveSomeCoffee\TheTVDbAPI\TheTVDbAPIInterface')->getMock();
-    }
-
     public function testCreateWrongInheritance()
     {
+        $parent = $this->createStub(TheTVDbAPIInterface::class);
         static::expectException(InvalidArgumentException::class);
-        RouteFactory::getRouteInstance($this->parent, static::class);
+        RouteFactory::getRouteInstance($parent, static::class);
     }
 
     public function testCreateCorrectInheritance()
     {
-        $return = RouteFactory::getRouteInstance($this->parent, AuthenticationRoute::class);
+        $parent = $this->createStub(TheTVDbAPIInterface::class);
+        $return = RouteFactory::getRouteInstance($parent, AuthenticationRoute::class);
         static::assertInstanceOf(AuthenticationRoute::class, $return);
     }
 }

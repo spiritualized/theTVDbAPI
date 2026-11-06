@@ -14,10 +14,10 @@
 
 declare(strict_types = 1);
 
-namespace CanIHaveSomeCoffee\TheTVDbAPI\Tests;
+namespace spiritualized\TheTVDbAPI\Tests;
 
-use CanIHaveSomeCoffee\TheTVDbAPI\Route\EpisodesRoute;
-use CanIHaveSomeCoffee\TheTVDbAPI\TheTVDbAPI;
+use spiritualized\TheTVDbAPI\Route\EpisodesRoute;
+use spiritualized\TheTVDbAPI\TheTVDbAPI;
 use Exception;
 use GuzzleHttp\Client;
 use GuzzleHttp\Exception\RequestException;
@@ -25,22 +25,22 @@ use GuzzleHttp\Handler\MockHandler;
 use GuzzleHttp\HandlerStack;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\Psr7\Response;
-use CanIHaveSomeCoffee\TheTVDbAPI\Exception\ParseException;
-use CanIHaveSomeCoffee\TheTVDbAPI\Exception\ResourceNotFoundException;
-use CanIHaveSomeCoffee\TheTVDbAPI\Exception\UnauthorizedException;
-use CanIHaveSomeCoffee\TheTVDbAPI\Route\AuthenticationRoute;
-use CanIHaveSomeCoffee\TheTVDbAPI\Route\ArtworkRoute;
-use CanIHaveSomeCoffee\TheTVDbAPI\Route\LanguagesRoute;
-use CanIHaveSomeCoffee\TheTVDbAPI\Route\SearchRoute;
-use CanIHaveSomeCoffee\TheTVDbAPI\Route\SeriesRoute;
-use CanIHaveSomeCoffee\TheTVDbAPI\Route\UpdatesRoute;
+use spiritualized\TheTVDbAPI\Exception\ParseException;
+use spiritualized\TheTVDbAPI\Exception\ResourceNotFoundException;
+use spiritualized\TheTVDbAPI\Exception\UnauthorizedException;
+use spiritualized\TheTVDbAPI\Route\AuthenticationRoute;
+use spiritualized\TheTVDbAPI\Route\ArtworkRoute;
+use spiritualized\TheTVDbAPI\Route\LanguagesRoute;
+use spiritualized\TheTVDbAPI\Route\SearchRoute;
+use spiritualized\TheTVDbAPI\Route\SeriesRoute;
+use spiritualized\TheTVDbAPI\Route\UpdatesRoute;
 use PHPUnit\Framework\TestCase;
 
 /**
  * Class TheTVDbAPITest tests with mock objects, which do not require a live API key.
  *
  * @category TheTVDbAPI
- * @package  CanIHaveSomeCoffee\TheTVDbAPI\Tests
+ * @package  spiritualized\TheTVDbAPI\Tests
  * @author   Willem Van Iseghem (canihavesomecoffee) <theTVDbAPI@canihavesome.coffee>
  * @license  See start of document
  * @link     https://canihavesome.coffee/projects/theTVDbAPI
@@ -64,7 +64,7 @@ class TheTVDbAPITest extends TestCase
     private function createPathErrorClient() : Client
     {
         return $this->createClientWithMockHandler([
-            new Response(404, ['Content-Length' => 0]),
+            new Response(404, ['Content-Length' => '0']),
             new RequestException("Error Communicating with Server", new Request('GET', 'test'))
         ]);
     }
@@ -75,7 +75,7 @@ class TheTVDbAPITest extends TestCase
     private function createTokenErrorClient() : Client
     {
         return $this->createClientWithMockHandler([
-            new Response(401, ['Content-Length' => 0]),
+            new Response(401, ['Content-Length' => '0']),
             new RequestException("Error Communicating with Server", new Request('GET', 'test'))
         ]);
     }

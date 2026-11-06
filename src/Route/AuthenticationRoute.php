@@ -13,27 +13,27 @@
  *
  * Route that exposes the authentication methods of TheTVDb API.
  *
- * PHP version 7.1
+ * PHP version 8.4
  *
  * @category TheTVDbAPI
- * @package  CanIHaveSomeCoffee\TheTVDbAPI\Route
+ * @package  spiritualized\TheTVDbAPI\Route
  * @author   Willem Van Iseghem (canihavesomecoffee) <theTVDbAPI@canihavesome.coffee>
  * @license  See start of document
  * @link     https://canihavesome.coffee/projects/theTVDbAPI
  */
 declare(strict_types = 1);
 
-namespace CanIHaveSomeCoffee\TheTVDbAPI\Route;
+namespace spiritualized\TheTVDbAPI\Route;
 
-use CanIHaveSomeCoffee\TheTVDbAPI\Exception\ParseException;
-use CanIHaveSomeCoffee\TheTVDbAPI\Exception\ResourceNotFoundException;
-use CanIHaveSomeCoffee\TheTVDbAPI\Exception\UnauthorizedException;
+use spiritualized\TheTVDbAPI\Exception\ParseException;
+use spiritualized\TheTVDbAPI\Exception\ResourceNotFoundException;
+use spiritualized\TheTVDbAPI\Exception\UnauthorizedException;
 
 /**
  * Class AuthenticationRoute
  *
  * @category TheTVDbAPI
- * @package  CanIHaveSomeCoffee\TheTVDbAPI\Route
+ * @package  spiritualized\TheTVDbAPI\Route
  * @author   Willem Van Iseghem (canihavesomecoffee) <theTVDbAPI@canihavesome.coffee>
  * @license  See start of document
  * @link     https://canihavesome.coffee/projects/theTVDbAPI

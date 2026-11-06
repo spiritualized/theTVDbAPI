@@ -13,7 +13,7 @@
  *
  * Example to show retrieving a Dutch show (which misses most English titles) using Dutch as the fallback.
  *
- * PHP version 7.4
+ * PHP version 8.4
  *
  * @category Examples
  * @author   Willem Van Iseghem (canihavesomecoffee) <theTVDbAPI@canihavesome.coffee>
@@ -23,7 +23,7 @@
 
 declare(strict_types=1);
 
-use CanIHaveSomeCoffee\TheTVDbAPI\TheTVDbAPI;
+use spiritualized\TheTVDbAPI\TheTVDbAPI;
 
 require_once __DIR__.'/../vendor/autoload.php';
 

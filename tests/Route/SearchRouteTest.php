@@ -14,23 +14,29 @@
 
 declare(strict_types=1);
 
-namespace CanIHaveSomeCoffee\TheTVDbAPI\Tests\Route;
+namespace spiritualized\TheTVDbAPI\Tests\Route;
 
-use CanIHaveSomeCoffee\TheTVDbAPI\Model\SearchResult;
-use CanIHaveSomeCoffee\TheTVDbAPI\Route\SearchRoute;
+use spiritualized\TheTVDbAPI\Model\SearchResult;
+use spiritualized\TheTVDbAPI\Route\SearchRoute;
+use spiritualized\TheTVDbAPI\TheTVDbAPI;
 use InvalidArgumentException;
 
 /**
  * Class SearchRouteTest
  *
  * @category TheTVDbAPI
- * @package  CanIHaveSomeCoffee\TheTVDbAPI\Tests
+ * @package  spiritualized\TheTVDbAPI\Tests
  * @author   Willem Van Iseghem (canihavesomecoffee) <theTVDbAPI@canihavesome.coffee>
  * @license  See start of document
  * @link     https://canihavesome.coffee/projects/theTVDbAPI
  */
-class SearchRouteTest extends BaseRouteTest
+class SearchRouteTest extends BaseRouteTestCase
 {
+    public function setUp(): void
+    {
+        $this->parent = $this->createStub(TheTVDbAPI::class);
+    }
+
     public function testSearchInvalidSpecifier()
     {
         $instance = new SearchRoute($this->parent);
@@ -48,6 +54,7 @@ class SearchRouteTest extends BaseRouteTest
      */
     private function setMockData($return, $options)
     {
+        $this->parent = $this->createMock(TheTVDbAPI::class);
         $this->parent->method('performAPICallWithJsonResponse')->willReturn($return);
         $this->parent->expects(static::once())->method('performAPICallWithJsonResponse')->with(
             static::equalTo('get'),

@@ -14,22 +14,22 @@
 
 declare(strict_types=1);
 
-namespace CanIHaveSomeCoffee\TheTVDbAPI\Tests\Route;
+namespace spiritualized\TheTVDbAPI\Tests\Route;
 
-use CanIHaveSomeCoffee\TheTVDbAPI\Model\EntityUpdate;
-use CanIHaveSomeCoffee\TheTVDbAPI\Route\UpdatesRoute;
+use spiritualized\TheTVDbAPI\Model\EntityUpdate;
+use spiritualized\TheTVDbAPI\Route\UpdatesRoute;
 use DateTime;
 
 /**
  * Class UpdatesRouteTest
  *
  * @category TheTVDbAPI
- * @package  CanIHaveSomeCoffee\TheTVDbAPI\Tests
+ * @package  spiritualized\TheTVDbAPI\Tests
  * @author   Willem Van Iseghem (canihavesomecoffee) <theTVDbAPI@canihavesome.coffee>
  * @license  See start of document
  * @link     https://canihavesome.coffee/projects/theTVDbAPI
  */
-class UpdatesRouteTest extends BaseRouteTest
+class UpdatesRouteTest extends BaseRouteTestCase
 {
 
 

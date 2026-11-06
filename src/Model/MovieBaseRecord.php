@@ -13,10 +13,10 @@
  *
  * Class to represent a list on theTVDb.
  *
- * PHP version 7.4
+ * PHP version 8.4
  *
  * @category TheTVDbAPI
- * @package  CanIHaveSomeCoffee\TheTVDbAPI\Model
+ * @package  spiritualized\TheTVDbAPI\Model
  * @author   Willem Van Iseghem (canihavesomecoffee) <theTVDbAPI@canihavesome.coffee>
  * @license  See start of document
  * @link     https://canihavesome.coffee/projects/theTVDbAPI
@@ -24,14 +24,14 @@
 
 declare(strict_types=1);
 
-namespace CanIHaveSomeCoffee\TheTVDbAPI\Model;
+namespace spiritualized\TheTVDbAPI\Model;
 
 use DateTime;
 
 /**
  * Class MovieBaseRecord
  *
- * @package CanIHaveSomeCoffee\TheTVDbAPI\Model
+ * @package spiritualized\TheTVDbAPI\Model
  */
 class MovieBaseRecord
 {
